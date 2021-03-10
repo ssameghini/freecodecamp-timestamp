@@ -2,14 +2,15 @@
 
 <html>
    <head>
-      <title>Timestamp Microservice | freeCodeCamp.org</title>
+      <title>Timestamp Microservice</title>
       <link rel="shortcut icon" href="https://cdn.freecodecamp.org/universal/favicons/favicon-32x32.png" type="image/x-icon"/>
       <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
-      <link href="style.css" rel="stylesheet" type="text/css">
+      <link href="./style.css" rel="stylesheet" type="text/css">
    </head>
 
    <body>
     <h1>Timestamp Microservice</h1>
+    <h2><em>A simple API for freeCodeCamp.org</em></h2>
     <hr />
     <div class="container">
       <h3>Example Usage:</h3>
@@ -23,9 +24,23 @@
         <code>{"unix":1451001600000, "utc":"Fri, 25 Dec 2015 00:00:00 GMT"}</code>
       </p>
     </div>
+    <br>
+    <div class='app'>
+      <h3>Get yout timestamp:</h3>
+      <ul>
+        <li>Enter <strong>only</strong> one of these two valid formats: "unix" or "utc".</li>
+      </ul>
+      <form action="api/timestamp/" method="POST">
+        <p>Select your date and time</p>
+        <input type="text" id="date-utc" name="date-utc" placeholder="Date String" />
+        <input type="number" id="date-unix" name="date-unix" placeholder="Date Unix" />
+        <button>Timestamp me!</button>
+      </form>
+    </div>
     <div class="footer">
       <p>
-        By <a href="https://www.freecodecamp.org/">freeCodeCamp.org</a>
+        By <a href="https://github.com/ssameghini">Sebastián Sameghini</a>
+        <p>He says <a href="api/hello">Hello!</a></p>
       </p>
     </div>
   </body>
