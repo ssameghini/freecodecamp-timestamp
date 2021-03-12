@@ -26,16 +26,18 @@
     </div>
     <br>
     <div class='app'>
-      <h3>Get yout timestamp:</h3>
+      <h3>Get your timestamp:</h3>
       <ul>
         <li>Enter <strong>only</strong> one of these two valid formats: "unix" or "utc".</li>
       </ul>
-      <form action="api/timestamp/" method="POST">
+      <form action="/api/timestamp" method="POST">
         <p>Select your date and time</p>
-        <input type="text" id="date-utc" name="date-utc" placeholder="Date String" />
-        <input type="number" id="date-unix" name="date-unix" placeholder="Date Unix" />
-        <button>Timestamp me!</button>
+        <input type="datetime-local" name="date" id="datetime-local" />
+        <input type="text" id="date-utc" name="date" placeholder="Date String" />
+        <input type="number" id="date-unix" name="date" placeholder="Date Unix" />
+        <button type="submit">Timestamp me!</button>
       </form>
+      <h3><a href="/api/timestamp/">Or if you want this exact moment...</a></h3>
     </div>
     <div class="footer">
       <p>
